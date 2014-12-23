@@ -1,0 +1,35 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=5073
+
+DESCRIPTION
+Cheat sheets that contain a single phrase, formula, or function invocation per
+line can be very helpful and are used by many people. Using such as a
+completion source is difficult, though. The full line completion
+(i_CTRL-X_CTRL-L considers other buffers, but cannot be restricted to a
+single one. And to trigger the completion, the base has to be written on a new
+line; you cannot recall a phrase from within an existing one. All of this can
+be avoided by using a snippet plugin, but the syntax to define them usually is
+more complex (so one cannot directly use one's cheat sheet), and the
+additional features interfere with easy definition. Also, not every snippet
+plugin offers the popup selection aspect of insert-mode completion, so you may
+have to remember the snippet name to recall it.
+
+This plugin provides a highly configurable completion of lines found in
+designated files or buffers, triggered by a keyword in front of the cursor.
+With its flexibility, you can use custom cheat sheets for a project, filetype,
+or particular buffer or window as well as global ones.
+
+SOURCE
+Inspired by
+    http://stackoverflow.com/questions/27539429/vim-snippet-phrase-dropdown-menu
+
+SEE ALSO
+- Check out the CompleteHelper.vim plugin page (vimscript #3914) for a full
+  list of insert mode completions powered by it.
+
+USAGE
+In insert mode, invoke the entry completion via CTRL-X CTRL-E
+You can then search forward and backward via CTRL-N / CTRL-P, as usual.
+
+CTRL-X CTRL-E           Find matches for entries (i.e. entire lines) from the
+                        designated sources configured by
+                        g:EntryComplete_Sources.
